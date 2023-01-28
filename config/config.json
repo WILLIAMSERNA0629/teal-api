@@ -7,17 +7,17 @@
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
+    "username": "process.env.DB.USER",
     "password": null,
     "database": "database_sequelize",
-    "host": "127.0.0.1",
+    "host": "process.env.DB.HOST",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
+    "username": "process.env.DB.USER",
+    "password": "process.env.DB.PASSWORD",
     "database": "database_sequelize",
-    "host": "127.0.0.1",
+    "host": "process.env.DB.HOST"  ,
     "dialect": "mysql"
   }
 }

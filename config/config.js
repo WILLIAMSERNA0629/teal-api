@@ -16,10 +16,11 @@ module.exports = {
     dialect: "mysql"
   },
   production: {
-    username: process.env.USERNAME,
+    username: process.env.USER,
     password: process.env.PASSWORD,
-    database: process.env.NAME,
-    host: process.env.HOST,
+    database: process.env.NAME || "database_sequelize",
+    host: process.env.HOSTNAME,
     port: process.env.PORT,
+    dialect: 'v4.0.0'
   }
 }

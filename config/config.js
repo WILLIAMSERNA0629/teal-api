@@ -21,6 +21,6 @@ module.exports = {
     database: process.env.NAME || "database_sequelize",
     host: process.env.HOSTNAME,
     port: process.env.PORT,
-    dialect: 'v4.0.0'
+    dialect: 'mysql'
   }
 }

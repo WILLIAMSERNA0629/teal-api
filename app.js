@@ -1,6 +1,14 @@
 // var createError = require('http-errors');
 const express = require('express');
 const app = express();
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions)) // Use this after the variable declaration
 // var path = require('path');
 // var cookieParser = require('cookie-parser');
 // var logger = require('morgan');
@@ -37,13 +45,6 @@ app.use('/users', usersRouters);
 //   res.status(err.status || 500);
 //   res.render('error');
 // });
-const cors=require("cors");
-const corsOptions ={
-   origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
-}
 
-app.use(cors(corsOptions)) // Use this after the variable declaration
 
 module.exports = app;
